@@ -1,0 +1,160 @@
+.menu-page {
+    .hero-section {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        background-image: url('../assets/About-head.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        &__content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+            h1 {
+                font-size: 3rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .menu-outer {
+        width: 85%;
+        margin: 0 auto;
+        padding: 3rem;
+        padding-top: 0;
+
+        .menu-categories {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            gap: 20%;
+
+            @media (max-width: 768px) {
+                gap: 5%;
+            }
+
+
+            .menu-category {
+                text-align: center;
+                margin: 0 10px;
+                cursor: pointer;
+
+                h3 {
+                    font-size: 1.2rem;
+                    color: #333;
+                    margin-bottom: 10px;
+                    transition: color 0.3s ease;
+                    text-wrap: nowrap;
+                }
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    transition: transform 0.3s ease;
+
+                    @media (max-width: 768px) {
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    &.active {
+                        transform: scale(1.1);
+                    }
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+
+                &.active h3 {
+                    color: #e75728;
+                }
+
+                &:hover h3 {
+                    color: #e75728;
+                }
+            }
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            gap: 34px;
+            padding: 20px 0;
+
+            @media (max-width: 1000px) {
+                flex-direction: column;
+            }
+
+
+            .menu-item {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                width: calc(50% - 17px);
+
+                @media (max-width: 1000px) {
+                    width: 100%;
+                }
+
+
+                img {
+                    width: calc(50% - 20px);
+                    border-radius: 8px;
+                }
+
+                &__details {
+                    width: calc(50% - 20px);
+
+                    h2 {
+                        font-size: 1.5rem;
+                        color: #e75728;
+                        margin: 0;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        color: #6c757d;
+                        margin: 10px;
+                    }
+
+                    button {
+                        background-color: #e75728;
+                        color: #fff;
+                        border: none;
+                        padding: 0.5rem 1rem;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+
+                        &:hover {
+                            background-color: #e58a1c;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

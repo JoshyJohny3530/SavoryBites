@@ -1,0 +1,111 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  z-index: 5;
+}
+.navbar--scrolled {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar__logo svg {
+  padding-right: 0.8rem;
+}
+.navbar__logo .logoname {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.navbar__logo:hover svg,
+.navbar__logo:hover .logoname {
+  color: #e75728 !important;
+}
+.navbar__links {
+  display: flex;
+}
+.navbar__links ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.navbar__links ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.navbar__links ul li a:hover {
+  color: #e75728 !important;
+}
+@media (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+}
+.navbar__toggle {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .navbar__toggle {
+    z-index: 8;
+    display: flex;
+    padding: 1px;
+  }
+}
+.navbar__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.navbar__overlay.open {
+  display: flex;
+}
+.navbar__overlay .navbar__menu {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 60%;
+}
+.navbar__overlay .navbar__menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navbar__overlay .navbar__menu ul li {
+  margin: 1rem 0;
+}
+.navbar__overlay .navbar__menu ul li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #2c2c2c;
+  transition: color 0.3s ease;
+}
+.navbar__overlay .navbar__menu ul li a:hover {
+  color: #e75728;
+}/*# sourceMappingURL=Navbar.css.map */
